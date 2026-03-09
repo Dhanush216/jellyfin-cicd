@@ -1,22 +1,22 @@
 terraform {
-    required_providers {
-        kubernetes = {
-            source = "hashicorp/kubernetes"
-            version = "~>2.0"
-        }
-        helm = {
-            source = "hashicorp/helm"
-            version = "~>3.0"
-        }
+  required_providers {
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~>2.0"
     }
+    helm = {
+      source  = "hashicorp/helm"
+      version = "~>3.0"
+    }
+  }
 }
 
 provider "kubernetes" {
-    config_path = "/home/otoko/.kube/config"
+  config_path = "/home/otoko/.kube/config"
 }
 
 provider "helm" {
-    kubernetes = {
-        config_path = "/home/otoko/.kube/config"
-    }
+  kubernetes = {
+    config_path = "/home/otoko/.kube/config"
+  }
 }
