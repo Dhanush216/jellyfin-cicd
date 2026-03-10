@@ -22,6 +22,12 @@ jobs:
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
+        
+      - name: Terraform Format Check
+        run: terraform fmt -check
+
+      - name: Existing Helm Release Check
+        run: terraform import helm_release.prometheus_stack monitoring/kube-prometheus-stack
 
       - name: Terraform Init
         run: terraform init
