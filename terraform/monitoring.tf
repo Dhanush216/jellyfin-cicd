@@ -8,6 +8,11 @@ resource "helm_release" "prometheus_stack" {
 
   create_namespace = true
 
+  atomic          = true
+  cleanup_on_fail = true
+  wait            = true
+  timeout         = 600
+
   values = [
     file("${path.module}/prometheus-values.yaml")
   ]

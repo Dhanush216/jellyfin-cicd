@@ -6,6 +6,11 @@ resource "helm_release" "jellyfin" {
   repository = "https://jellyfin.github.io/jellyfin-helm"
   chart      = "jellyfin"
 
+  atomic          = true
+  cleanup_on_fail = true
+  wait            = true
+  timeout         = 600
+
   values = [
     file("${path.module}/jellyfin-values.yaml"),
     yamlencode({
