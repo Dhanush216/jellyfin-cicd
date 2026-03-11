@@ -27,7 +27,7 @@ jobs:
         run: terraform fmt -check
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -input=false -reconfigure
 
       - name: Existing Helm Release Check
         run: terraform import helm_release.prometheus_stack monitoring/kube-prometheus-stack  
@@ -66,7 +66,7 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -input=false -reconfigure
 
       - name: Download Terraform Plan
         uses: actions/download-artifact@v4
