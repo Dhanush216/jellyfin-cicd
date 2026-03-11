@@ -32,9 +32,6 @@ jobs:
       - name: Terraform Init
         run: terraform init -input=false -reconfigure
 
-      - name: Existing Helm Release Check
-        run: terraform import helm_release.prometheus_stack monitoring/kube-prometheus-stack  
-
       - name: Terraform Validate
         run: terraform validate
 
