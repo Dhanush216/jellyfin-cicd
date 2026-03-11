@@ -26,6 +26,9 @@ jobs:
       - name: Terraform Format Check
         run: terraform fmt -check
 
+      - name: Show Terraform State
+        run: terraform state list
+        
       - name: Terraform Init
         run: terraform init -input=false -reconfigure
 
