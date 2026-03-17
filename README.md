@@ -289,6 +289,10 @@ done
 
 <img width="1364" height="624" alt="Screenshot from 2026-03-17 12-10-46" src="https://github.com/user-attachments/assets/f5f524ab-20c3-4b03-998a-993c6151251a" />
 
+### 📸 Minio Dashboard
+
+<img width="1364" height="624" alt="Screenshot from 2026-03-17 12-19-01" src="https://github.com/user-attachments/assets/fc6ccda7-591f-482a-99b5-3944f82a9461" />
+
 
 ### 📊 Monitoring Dashboard (Prometheus / Grafana)
 
